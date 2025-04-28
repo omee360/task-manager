@@ -18,4 +18,5 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 
 // Tasks ke liye resource routes
 // Ye CRUD ke liye standard routes banata hai (index, create, store, edit, update, destroy)
+// Route::resource('tasks', TaskController::class)->except(['show']);
 Route::resource('tasks', TaskController::class);

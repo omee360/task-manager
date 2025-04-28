@@ -43,6 +43,13 @@ class TaskController extends Controller
         return redirect()->route('tasks.index')->with('success', 'Task created successfully!');
     }
 
+    // Specific task ke details dikhata hai
+    public function show(Task $task)
+    {
+        // tasks.show view ko render karo aur task data pass karo
+        return view('tasks.show', compact('task'));
+    }
+
     // Task edit karne ka form dikhata hai
     public function edit(Task $task)
     {
